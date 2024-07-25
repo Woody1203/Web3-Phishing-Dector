@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <title>PHISHING DETECTOR - Woody</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 30px;
+      font-weight: 600 !important;
+      font-size: 3.2em;
+      color: #343a40;
+    }
+
+    .form-group {
+      text-align: center;
+    }
+
+    textarea {
+      width: 100%;
+      resize: none;
+    }
+
+    .btn-custom {
+      margin-top: 20px;
+      background-color: #ff6600;
+      border-color: #ff6600;
+      color: white;
+    }
+
+    .btn-custom:hover {
+      background-color: #ff4500;
+      border-color: #ff4500;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>PHISHING DETECTOR</h2>
+    <div class="row">
+      <div class="col-lg-12">
+        <form class="form-horizontal" action="/predict" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+            <h4>Enter the message here:</h4>
+            <textarea class="form-control" rows="5" name="message" placeholder="Type your message here..."></textarea>
+            <input type="submit" class="btn btn-custom" value="Predict">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

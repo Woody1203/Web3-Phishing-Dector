@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+
+WORKDIR /LLM_PHISHING_DETECTION/
+
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+ENV PYTHONPATH="/LLM_PHISHING_DETECTION"
+
+ENTRYPOINT [ "python3", "src/main.py" ]
