@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>PHISHING DETECTOR - Woody</title>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 30px;
+      font-weight: 600 !important;
+      font-size: 3.2em;
+      color: #343a40;
+    }
+
+    h4,
+    h3 {
+      text-align: center;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .phishing-icon {
+      color: red;
+      font-size: 3em;
+    }
+
+    .safe-icon {
+      color: green;
+      font-size: 3em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>PHISHING DETECTOR</h2>
+    <div class="row">
+      <div class="col-lg-12 result">
+        <h4>Message entered:</h4>
+        <p>{{message}}</p>
+        <h3>
+          {% if is_phising %}
+          <i class="fas fa-exclamation-triangle phishing-icon"></i>
+          This is likely a phishing message.
+          {% else %}
+          <i class="fas fa-smile safe-icon"></i>
+          This message is safe.
+          {% endif %}
+        </h3>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
